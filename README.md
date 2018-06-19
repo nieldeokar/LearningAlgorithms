@@ -43,6 +43,15 @@ For binary search, you have to check `log<sub>2</sub> n` elements in the worst c
 • Algorithm times are written in Big O notation.  
 
 ## Chapter 2 - Arrays and Lists :
+Computer memory is like block of drawers. When you visit swimming pool you ask for drawer, guy over there gives you drawer number and key to the drawer then you go to the drawer room find your drawer open it and keep inside whatever you want. Same way when program is executing you need to store some variables somewhere, the place where it gets stored in memory. Now there are different ways in which we can store data into computer memory like array or list.
+
+### Arrays :
+Arrays are like continues block of drawers together aligned side by side or one below another with fixed size. If we are using array we need to specify size in advance. If we need to increase the size of an array computer might have to copy array to new location to get the required size in continuation which is a costly operation.
+
+### Linked Lists :
+Linked Lists are dynamic in size. They can grow in size as and when required. Linked lists are like treasure hunt game where you go to first address and it says "Your next address is 123", Then you go to the 123 and then it says "Your next address is 456". Each memory block of linked list stores the address to the next block because of which they are dynamic in size.
+
+
 
 ## Chapter 3 - Recursion :
 Recursion is function calling to itself. Suppose we want to print countdown like 3..2..1..0
@@ -67,7 +76,8 @@ print(countdown(5))
 This snipped will stop printing once we reach `i < 0`.
 
 ### Conclusion :  
-Recursion is used when it makes the solution clearer.  ere’s no performance bene t to using recursion; in fact, loops are sometimes better for performance. I like this quote by [Leigh Caldwell on Stack Overflow][2] “Loops may achieve a performance gain for your program. Recursion may achieve a performance gain for your programmer. Choose which is more important in your situation!”
+Recursion is used when it makes the solution clearer.  ere’s no performance bene t to using recursion; in fact, loops are sometimes better for performance. I like this quote by [Leigh Caldwell on Stack Overflow][2]
+>“Loops may achieve a performance gain for your program. Recursion may achieve a >performance gain for your programmer. Choose which is more important in your >situation!”
 
 ### Recap  
 • Recursion is when a function calls itself.  
