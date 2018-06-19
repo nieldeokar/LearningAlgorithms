@@ -20,7 +20,7 @@ more like sorting and then searching. Sorting as in since we know that Eric is a
 ### Simple Search & Binary Search :
 Suppose I’m thinking of a number between 1 and 100. You have to try to guess my number in the fewest tries possible. With every guess, I’ll tell you if your guess is too low, too high, or correct. Suppose you start guessing like this: 1, 2, 3, 4 .... with every search you are trying to eliminate only one number. If my number was 99, it could take you 99 guesses to get there!
 
-**A better way to search**
+**A better way to search**  
 Here’s a better technique. Start with 50 and my response is *too low*, but you just eliminated half the numbers! Now you know that 1–50 are all too low. Next guess: 75. *Too high*, but again you cut down half the remaining numbers! With binary search, you guess the middle number and eliminate half the remaining numbers every time. Next is 63 (halfway between 50 and 75). This is binary search.  
 
 Whatever number I’m thinking of, you can guess in a maximum of *seven* guesses—because you eliminate so many numbers with every guess!
@@ -35,6 +35,14 @@ When you search for an element using simple search, in the worst case you might 
 
 For binary search, you have to check `log<sub>2</sub> n` elements in the worst case. For a list of 8 elements, `log<sub>2</sub> 8` == 3, because `2<sup>3</sup>` == 8. So for a list of 8 numbers, you would have to check 3 numbers at most. For a list of 1,024 elements, `log<sub>2</sub> 1,024` = 10, because 210 == 1,024. So for a list of 1,024 numbers, you’d have to check 10 numbers at most.
 
+### Recap  
+• Binary search is a lot faster than simple search.  
+• O(log n) is faster than O(n), but it gets a lot faster once the list of items you’re searching through grows.  
+• Algorithm speed isn’t measured in seconds.  
+• Algorithm times are measured in terms of growth of an algorithm.  
+• Algorithm times are written in Big O notation.  
+
+## Chapter 2 - Arrays and Lists :
 
 ## Chapter 3 - Recursion :
 Recursion is function calling to itself. Suppose we want to print countdown like 3..2..1..0
@@ -58,15 +66,15 @@ print(countdown(5))
 
 This snipped will stop printing once we reach `i < 0`.
 
-### Conclusion :
+### Conclusion :  
 Recursion is used when it makes the solution clearer.  ere’s no performance bene t to using recursion; in fact, loops are sometimes better for performance. I like this quote by [Leigh Caldwell on Stack Overflow][2] “Loops may achieve a performance gain for your program. Recursion may achieve a performance gain for your programmer. Choose which is more important in your situation!”
 
-### Recap
-• Recursion is when a function calls itself.
-• Every recursive function has two cases: the base case and the recursive case.
-• A stack has two operations: push and pop.
-• All function calls go onto the call stack.
-• The call stack can get very large, which takes up a lot of memory.
+### Recap  
+• Recursion is when a function calls itself.  
+• Every recursive function has two cases: the base case and the recursive case.  
+• A stack has two operations: push and pop.  
+• All function calls go onto the call stack.  
+• The call stack can get very large, which takes up a lot of memory.  
 
 
 
