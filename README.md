@@ -51,6 +51,25 @@ Arrays are like continues block of drawers together aligned side by side or one 
 ### Linked Lists :
 Linked Lists are dynamic in size. They can grow in size as and when required. Linked lists are like treasure hunt game where you go to first address and it says "Your next address is 123", Then you go to the 123 and then it says "Your next address is 456". Each memory block of linked list stores the address to the next block because of which they are dynamic in size.
 
+### Selection sort :
+Suppose we have a list of songs and for each artist we have play count and we want to sort list according to the play count what can we do ? Let's talk in terms of algorithm.
+1. Create a empty list where we will put our items in descending order.  
+2. Find the max played item from the original list.  
+3. Put that item into new list.  
+4. Now repeat from step 2 till our original list is empty.
+
+To  find the artist with the highest play count, we have to check each item in the list, this takes O(n) time (Step 2). So we have an operation that takes O(n) time, and we have to do that n times. Which makes it `O(n × n)` time.  
+
+This is what the **Selection sort** is.
+
+### Recap
+• Your computer’s memory is like a giant set of drawers.  
+• When you want to store multiple elements, use an array or a list.  
+• With an array, all your elements are stored right next to each other.  
+• With a list, elements are strewn all over, and one element stores the address of the next one.  
+• Arrays allow fast reads.  
+• Linked lists allow fast inserts and deletes.  
+• All elements in the array should be the same type (all ints, all doubles, and so on).  
 
 
 ## Chapter 3 - Recursion :
@@ -77,7 +96,7 @@ This snipped will stop printing once we reach `i < 0`.
 
 ### Conclusion :  
 Recursion is used when it makes the solution clearer.  ere’s no performance bene t to using recursion; in fact, loops are sometimes better for performance. I like this quote by [Leigh Caldwell on Stack Overflow][2]
->“Loops may achieve a performance gain for your program. Recursion may achieve a >performance gain for your programmer. Choose which is more important in your >situation!”
+>Loops may achieve a performance gain for your program. Recursion may achieve a >performance gain for your programmer. Choose >which is more important in your >situation!
 
 ### Recap  
 • Recursion is when a function calls itself.  
@@ -85,6 +104,7 @@ Recursion is used when it makes the solution clearer.  ere’s no performance be
 • A stack has two operations: push and pop.  
 • All function calls go onto the call stack.  
 • The call stack can get very large, which takes up a lot of memory.  
+
 
 
 
