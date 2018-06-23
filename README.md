@@ -117,8 +117,21 @@ D&C isn’t a simple algorithm that you can apply to a problem. Instead, it’s 
 “If you find the biggest box that will work for this size, that will be the biggest box that will work for the entire farm.” Khan academy has a good explanation here on [Euclid's algorithm][3]:
 
 #### Inductive proofs
+Inductive proofs are one way to prove that your algorithm works. Each inductive proof has two steps: the **base case** and the **inductive case**. Sound familiar? For example, suppose I want to prove that I can climb to the top of a ladder. In the inductive case, if my legs are on a rung, I can put my legs on the next rung. So if I’m on rung 2, I can climb to rung 3.  at’s the inductive case. For the base case, I’ll say that my legs are on rung 1.  Therefore, I can climb the entire ladder, going up one rung at a time.
+
 #### Big O notation revisited
+Quicksort is unique because its speed depends on the pivot you choose. Before I talk about quicksort, let’s look at the most common Big O run times again.
+• Simple search : **O(n)**  
+• Binary search : **O(log n)**  
+• Quick sort : **O(n log n)**  
+• Selection sort : **O(n2)**  
+• Traveling salesman : **O(n!)**  
+
 #### Average case vs. worst case
+If you always choose a random element in the array as the pivot, quicksort will complete in O(n log n) time on average.
+
+In the worst case, there are O(n) levels, so the algorithm will take O(n) * O(n) = O(n2) time.
+
 
 ### Recap
 • D&C works by breaking a problem down into smaller and smaller pieces. If you’re using D&C on a list, the base case is probably an empty array or an array with one element.
