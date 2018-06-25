@@ -139,6 +139,65 @@ In the worst case, there are O(n) levels, so the algorithm will take O(n) * O(n)
 • The constant in Big O notation can matter sometimes.  at’s why quicksort is faster than merge sort.
 • The constant almost never matters for simple search versus binary search, because O(log n) is so much faster than O(n) when your list gets big.
 
+## Chapter 4 - HashTable :
+
+#### Hash function:
+In technical terminology, we’d say that a hash function “maps strings to numbers.” You might think there’s no discernable pattern to what number you get out when you put a string in. But there are some requirements for a hash function:
+• It needs to be consistent. For example, suppose you put in “apple” and get back “4”. Every time you put in “apple”, you should get “4” back. Without this, your hash table won’t work.
+• It should map different words to different numbers. For example, a hash function is no good if it always returns “1” for any word you put in. In the best case, every different word should map to a different number.
+
+#### Use cases :
+1. Using hash tables for lookups : Phonebook example  
+2. Preventing duplicate entries : Voting booth example  
+3. Using hash tables as a cache : Fb Server / Niece asking mars distance example
+
+Recap
+To recap, hashes are good for  
+• Modelling relationships from one thing to another thing  
+• Filtering out duplicates  
+• Caching/memorising data instead of making your server do work  
+
+#### Collisions
+
+When a hash function assigns two keys to the same slot *Collision* occurs. Suppose we have a hash function which assigns the 1 slots alphabetically. We start assigning them with 0 = apple,1 = banana, Problem occurs when we want to assign slot to avocado since  a == 0 = apple. That slot it already assigned.
+Simplest workaround is : if multiple keys map to the same slot, start a linked list at that slot.
+
+
+There are two lessons here:
+• Your hash function is really important. Your hash function mapped all the keys to a single slot. Ideally, your hash function would map keys evenly all over the hash.  
+• If those linked lists get long, it slows down your hash table a lot. But they won’t get long if you use a good hash function!
+Hash functions are important. A good hash function will give you very few collisions.  
+• Hash tables use an array for storage
+
+#### Performance
+
+In the average case, hash tables take O(1) for everything. O(1) is called constant time. In the worst case, a hash table takes O(n)—linear time. To avoid worst case we need :
+
+• A low load factor  
+• A good hash function  
+
+##### Load Factor
+               No of items of hash table
+              ____________________________
+loadFactor =      Total no of slots
+
+Having a load factor greater than 1 means you have more items than slots in your array. Once the load factor starts to grow, you need to add more slots to your hash table. This is called resizing.  
+With a lower load factor, you’ll have fewer collisions, and your table will perform better. A good rule of thumb is, resize when your load factor is greater than 0.7.
+
+##### A good hash function
+A good hash function distributes values in the array evenly.  
+A bad hash function groups values together and produces a lot of collisions.  
+
+#### Recap
+• You can make a hash table by combining a hash function with an array.  
+• Collisions are bad. You need a hash function that minimizes collisions.  
+• Hash tables have really fast search, insert, and delete.  
+• Hash tables are good for modeling relationships from one item to another item.  
+• Once your load factor is greater than .07, it’s time to resize your hash table.  
+• Hash tables are used for caching data (for example, with a web server).  
+• Hash tables are great for catching duplicates.  
+
+
 
 
 
