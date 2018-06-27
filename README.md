@@ -215,6 +215,17 @@ To calculate the shortest path in an unweighted graph, use *breadth-first search
 *Cycle* in graph means to nodes are pointing at each other. same as *directed graph* from chapter 6. *Dijkstra’s algorithm* will never give shortest path if we follow cycle in graph. It only works with **directed acyclic graphs**, called DAGs for short.  
 
 
+##### Negative-weight edges :
+Dijkstra’s algorithm assumed that because you were processing the poster node, there was no faster way to get to that node.  at assumption only works if you have no negative-weight edges. So you can’t use **negative-weight** edges with Dijkstra’s algorithm. If you want to find the shortest path in a graph that has negative-weight edges, there’s an algorithm for that! It’s called the *Bellman-Ford* algorithm.
+
+
+
+### Recap
+• Breadth-first search is used to calculate the shortest path for an unweighted graph.  
+• Dijkstra’s algorithm is used to calculate the shortest path for a weighted graph.  
+• Dijkstra’s algorithm works when all the weights are positive.  
+• If you have negative weights, use the Bellman-Ford algorithm.  
+
 
 
 
