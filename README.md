@@ -198,6 +198,23 @@ A bad hash function groups values together and produces a lot of collisions.
 • Hash tables are great for catching duplicates.  
 
 
+## Chapter 7 - Dijkstra's Algorithm :
+Breadth first gives us the shortest path from **A** to **B** however it is not necessary that shortest path would be a *fastest* path. With use of **Dijkstra's Algorithm** we can find out the fastest path.
+
+Steps to Dijkstra’s algorithm:
+1. Find the **cheapest** node. This is the node you can get to in the least amount of time.  
+2. Update the costs of the neighbors of this node.  
+3. Repeat until you’ve done this for every node in the graph.  
+4. Calculate the final path.  
+
+##### Weighted & Unweighted graph :
+A graph having weight associated with it's edges is called as **Weighted graph** and the one which does not has any weight associated with it's edges is called as **Unweighted graph**.  
+
+To calculate the shortest path in an unweighted graph, use *breadth-first search*. To calculate the shortest path in a weighted graph, use *Dijkstra’s algorithm*.   
+
+*Cycle* in graph means to nodes are pointing at each other. same as *directed graph* from chapter 6. *Dijkstra’s algorithm* will never give shortest path if we follow cycle in graph. It only works with **directed acyclic graphs**, called DAGs for short.  
+
+
 
 
 
