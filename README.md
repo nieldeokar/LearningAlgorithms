@@ -280,14 +280,69 @@ To calculate the shortest path in an unweighted graph, use *breadth-first search
 ##### Negative-weight edges :
 Dijkstra’s algorithm assumed that because you were processing the poster node, there was no faster way to get to that node.  at assumption only works if you have no negative-weight edges. So you can’t use **negative-weight** edges with Dijkstra’s algorithm. If you want to find the shortest path in a graph that has negative-weight edges, there’s an algorithm for that! It’s called the *Bellman-Ford* algorithm.
 
-
-
 ### Recap
 • Breadth-first search is used to calculate the shortest path for an unweighted graph.  
 • Dijkstra’s algorithm is used to calculate the shortest path for a weighted graph.  
 • Dijkstra’s algorithm works when all the weights are positive.  
 • If you have negative weights, use the Bellman-Ford algorithm.  
 
+## Chapter 8 - Greedy Algorithm :
+In technical terms: at each step you pick the *locally optimal solution*, and in the end you’re left with the *globally optimal* solution.
+
+- Overlapping class examples  
+- The knapsack problem. Greedy thief.  
+
+
+- The Radio set-covering problem   
+When calculating the exact solution will take too much time, an approximation algorithm will work. Approximation algorithms are judged by
+• How fast they are
+• How close they are to the optimal solution
+Greedy algorithms are a good choice because not only are they simple to come up with, but that simplicity means they usually run fast.
+
+To recap:
+• Sets are like lists, except sets can’t have duplicates.
+• You can do some interesting operations on sets, like union, intersection, and difference.
+
+#### Traveling salesman problem :
+Suppose salesman has to visit 4 cities find the shortest path that will take him to all the cities.
+
+1. Start with 2 cities :-  
+  - Assume Start at A then visit B
+  - Assume Start at B then visit A  
+  That means **2 Cities = 2 ways**
+2. Now consider 3 cities :-  
+  - Assume starting at A : you have 2 possible routes (visit B first then C or visit C first then B).   
+  - Assume starting at B : you have 2 possible routes (visit A first then C or visit C first then A).   
+  - Assume starting at C : you have 2 possible routes (visit A first then B or visit B first then A).   
+  That means **3 Cities = 6 ways**
+3. Now consider 4 cities :-  
+  - Assume starting at A : 6 possible routes (As calculated in **2**)   
+  - Assume starting at B : 6 possible routes (As calculated in **2**)   
+  - Assume starting at C : 6 possible routes (As calculated in **2**)   
+  - Assume starting at D : 6 possible routes (As calculated in **2**)   
+  That means Four possible start cities, with six possible routes for each start city  = 4 * 6 = **4 Cities = 24 ways**.  
+
+##### Pattern :
+
+1 ---> **1 Route**  
+2 ---> 2 Start cities * **1 Route** for each city = **2 total routes**  
+3 ---> 3 Start cities * **2 Routes** = **6 total routes**  
+4 ---> 4 Start cities * **6 Routes** = **24 total routes**  
+5 ---> 5 Start cities * **24 Routes** = **120 total routes**  
+and so on...
+This is called as *factorial function*. Suppose we have 10 cities. How many possible routes are there? *10! = 3,628,800*. As we can see number of routes becomes big very fast. That is why it’s impossible to compute the "correct" solution for the traveling-salesperson problem if you have a large number of cities.
+
+
+##### Approximating  
+What’s a good approximation algorithm for the traveling salesperson? Something simple that finds a short path. See if you can come up with an answer before reading on.
+Here’s how I would do it: arbitrarily pick a start city.  en, each time the salesperson has to pick the next city to visit, they pick the closest unvisited city.  
+
+
+### Recap
+• Greedy algorithms optimize locally, hoping to end up with a global optimum.  
+• NP-complete problems have no known fast solution.  
+• If you have an NP-complete problem, your best bet is to use an approximation algorithm.  
+• Greedy algorithms are easy to write and fast to run, so they make good approximation algorithms.  
 
 
 
