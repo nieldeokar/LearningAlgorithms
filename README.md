@@ -105,7 +105,7 @@ Recursion is used when it makes the solution clearer.  ere’s no performance be
 • All function calls go onto the call stack.  
 • The call stack can get very large, which takes up a lot of memory.  
 
-## Chapter 3 - QuickSort :
+## Chapter 4 - QuickSort :
 
 #### Divide & conquer
 It's a strategy of breaking down a problem to it's lowest state and then working on it again. Here is how D&C works:  
@@ -120,7 +120,8 @@ D&C isn’t a simple algorithm that you can apply to a problem. Instead, it’s 
 Inductive proofs are one way to prove that your algorithm works. Each inductive proof has two steps: the **base case** and the **inductive case**. Sound familiar? For example, suppose I want to prove that I can climb to the top of a ladder. In the inductive case, if my legs are on a rung, I can put my legs on the next rung. So if I’m on rung 2, I can climb to rung 3.  at’s the inductive case. For the base case, I’ll say that my legs are on rung 1.  Therefore, I can climb the entire ladder, going up one rung at a time.
 
 #### Big O notation revisited
-Quicksort is unique because its speed depends on the pivot you choose. Before I talk about quicksort, let’s look at the most common Big O run times again.
+Quicksort is unique because its speed depends on the pivot you choose. Before I talk about quicksort, let’s look at the most common Big O run times again.  
+
 • Simple search : **O(n)**  
 • Binary search : **O(log n)**  
 • Quick sort : **O(n log n)**  
@@ -139,7 +140,7 @@ In the worst case, there are O(n) levels, so the algorithm will take O(n) * O(n)
 • The constant in Big O notation can matter sometimes.  at’s why quicksort is faster than merge sort.
 • The constant almost never matters for simple search versus binary search, because O(log n) is so much faster than O(n) when your list gets big.
 
-## Chapter 4 - HashTable :
+## Chapter 5 - HashTable :
 
 #### Hash function:
 In technical terminology, we’d say that a hash function “maps strings to numbers.” You might think there’s no discernable pattern to what number you get out when you put a string in. But there are some requirements for a hash function:
@@ -197,7 +198,58 @@ A bad hash function groups values together and produces a lot of collisions.
 • Hash tables are used for caching data (for example, with a web server).  
 • Hash tables are great for catching duplicates.  
 
+## Chapter 6 - Breadth first search :
 
+ The algorithm to solve a shortest-path problem is called breadth- first search. A graph models a set of connections. For example, suppose you and your friends are playing poker, and you want to model who owes whom money. Here’s how you could say, “Alex owes Rama money.”
+
+ --------           --------  
+ | ALEX | --------> | Rama |  
+ --------           --------  
+Graphs are made up of nodes and edges. A node can be directly connected to many other nodes. Those nodes are called its neighbours. In this graph, Rama is Alex’s neighbour.
+
+### Finding the shortest path
+These are the two questions that breadth- first search can answer for you:
+• Question type 1: Is there a path from node A to node B? (Is there a mango seller in your network?)
+• Question type 2: What is the shortest path from node A to node B? (Who is the closest mango seller?)
+
+Another way to see this is, first-degree connections are added to the search list before second-degree connections.
+You just go down the list and check people to see whether each one is a mango seller. The first-degree connections will be searched before the second- degree connections, so you’ll find the mango seller closest to you. Breadth-first search *not only  finds a path from A to B*, it also *finds the shortest path*.
+
+#### Queues : B-F search uses queue
+
+
+The algorithm will keep going until either  
+• A mango seller is found, or  
+• The queue becomes empty, in which case there is no mango seller.  
+
+### Exercises :
+6.1 : Length of shortest path from *start* to *finish* is **2**.
+6.2 : Length of shortest path from *cab* to *bat* is **2**. cab - cat - bat
+6.3 : **A**
+1. Wake up.   
+2. Shower.  
+3. Eat breakfast.  
+4. Brush teeth.  
+Ans : **Invalid** Can not eat before brush.  
+
+**B**
+1. Wake up.   
+2. Brush teeth.  
+3. Eat breakfast.  
+4. Shower.  
+Ans : **Valid**
+
+**C**
+1. Shower.   
+2. Wake up.  
+3. Brush teeth.  
+4. Eat breakfast.  
+Ans : **Invalid** Can not take shower before waking up.
+
+6.5 : **A & C** both graphs are also trees.
+
+### Recap
+=======
 ## Chapter 7 - Dijkstra's Algorithm :
 Breadth first gives us the shortest path from **A** to **B** however it is not necessary that shortest path would be a *fastest* path. With use of **Dijkstra's Algorithm** we can find out the fastest path.
 
@@ -227,6 +279,15 @@ Dijkstra’s algorithm assumed that because you were processing the poster node,
 • If you have negative weights, use the Bellman-Ford algorithm.  
 
 
+• Breadth-first search tells you if there’s a path from A to B.  
+• If there’s a path, breadth- first search will find the shortest path.  
+• If you have a problem like “Find the shortest X,” try modelling your problem as a graph, and use breadth-first search to solve.  
+• A directed graph has arrows, and the relationship follows the direction of the arrow (rama -> adit means “rama owes adit money”).  
+• Undirected graphs don’t have arrows, and the relationship goes both ways (ross - rachel means “ross dated rachel and rachel dated ross”).  
+• Queues are FIFO (First In, First Out).  
+• Stacks are LIFO (Last In, First Out).  
+• You need to check people in the order they were added to the search list, so the search list needs to be a queue. Otherwise, you won’t get the shortest path.  
+• Once you check someone, make sure you don’t check them again. Otherwise, you might end up in an in nite loop.  
 
 
 [1]: https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230
