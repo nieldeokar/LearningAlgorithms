@@ -363,6 +363,26 @@ For each of these algorithms, say whether it’s a greedy algorithm or not.
 8.8 You’re making a map of the USA, and you need to color adjacent states with different colors. You have to find the minimum number of colors you need so that no two adjacent states are the same color. Is this an NP-complete problem?  
 **Answer: Yes**  
 
+## Chapter 9 - Dynamic Programming :
+
+#### The knapsack problem :
+Suppose you are a thief and want to steal items so that you get maximum money's worth goods? You can only carry 4lbs.
+- Stereo 3000$ - 4 lbs
+- Laptop 2000$ - 4 lbs
+- Guitar 1500$ - 1 lbs
+
+List of all the possibilities :
+1. No items : 0$  
+2. Guitar : 1500$  
+3. Stereo : 3000$  
+4. Laptop : 2000$  
+5. Guitar + Stereo : 3500$ but **Doesn't fit** weight 5lbs  
+6. Guitar + Laptop : 3500$  
+7. Stereo + Laptop : 5000$ but **Doesn't fit** weight 8lbs  
+8. Guitar + Stereo + Laptop : 6500$ but **Doesn't fit** weight 9lbs   
+
+ is works, but it’s really slow. For 3 items, you have to calculate 8 possible sets. For 4 items, you have to calculate 16 sets. With every item you add, the number of sets you have to calculate doubles! This algorithm takes **O(2^n)** time, which is very, very slow.
+
 
 [1]: https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230
 [2]: http://stackoverflow.com/a/72694/139117
