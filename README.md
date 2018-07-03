@@ -397,7 +397,13 @@ What does the grid for this problem look like? We need to answer these questions
 • How do you divide this problem into subproblems?  
 • What are the axes of the grid?  
 
-
+### Recap
+• Dynamic programming is useful when you’re trying to optimize something given a constraint.  
+• You can use dynamic programming when the problem can be broken into discrete subproblems.  
+• Every dynamic-programming solution involves a grid.  
+• The values in the cells are usually what you’re trying to optimize.  
+• Each cell is a subproblem, so think about how you can divide your problem into subproblems.  
+• There’s no single formula for calculating a dynamic-programming solution.
 
 
 [1]: https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230
