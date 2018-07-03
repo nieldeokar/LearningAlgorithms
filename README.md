@@ -381,7 +381,23 @@ List of all the possibilities :
 7. Stereo + Laptop : 5000$ but **Doesn't fit** weight 8lbs  
 8. Guitar + Stereo + Laptop : 6500$ but **Doesn't fit** weight 9lbs   
 
- is works, but it’s really slow. For 3 items, you have to calculate 8 possible sets. For 4 items, you have to calculate 16 sets. With every item you add, the number of sets you have to calculate doubles! This algorithm takes **O(2^n)** time, which is very, very slow.
+This works, but it’s really slow. For 3 items, you have to calculate 8 possible sets. For 4 items, you have to calculate 16 sets. With every item you add, the number of sets you have to calculate doubles! This algorithm takes **O(2^n)** time, which is very, very slow.
+
+• Dynamic programming is useful when you’re trying to optimize something given a constraint. In the knapsack problem, you had to maximize the value of the goods you stole, constrained by the size of the knapsack.  
+• You can use dynamic programming when the problem can be broken into discrete subproblems, and they don’t depend on each other.  
+
+##### Some general tips follow :
+• Every dynamic-programming solution involves a grid.  
+• The values in the cells are usually what you’re trying to optimize. For the knapsack problem, the values were the value of the goods.  
+• Each cell is a subproblem, so think about how you can divide your problem into subproblems. That will help you  figure out what the axes are.  
+
+##### Making the grid :
+What does the grid for this problem look like? We need to answer these questions:  
+• What are the values of the cells?  
+• How do you divide this problem into subproblems?  
+• What are the axes of the grid?  
+
+
 
 
 [1]: https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230
