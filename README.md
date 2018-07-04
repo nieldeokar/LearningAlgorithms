@@ -406,6 +406,17 @@ What does the grid for this problem look like? We need to answer these questions
 • There’s no single formula for calculating a dynamic-programming solution.
 
 
+## Chapter 10 k-nearest neighbours
+It is used in classification, If we put two fruits grapefruit and orange on graph with x axis as SIZE and y axis as COLOUR. Then to classify items on the graph we might take neighbouring items and compare them. More neighbors are orange means it is orange.   
+
+Same happens with the netflix recommendation system. Users with same choice of movies are placed together on graph and then ask them to rate the movies. Based on their ratings movies are recommended to other users.
+
+#### Regression
+#### Cosine similarity
+#### Picking good features
+
+
+
 [1]: https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230
 [2]: http://stackoverflow.com/a/72694/139117
 [3]: https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
