@@ -397,6 +397,43 @@ What does the grid for this problem look like? We need to answer these questions
 • How do you divide this problem into subproblems?  
 • What are the axes of the grid?  
 
+### Recap
+• Dynamic programming is useful when you’re trying to optimize something given a constraint.  
+• You can use dynamic programming when the problem can be broken into discrete subproblems.  
+• Every dynamic-programming solution involves a grid.  
+• The values in the cells are usually what you’re trying to optimize.  
+• Each cell is a subproblem, so think about how you can divide your problem into subproblems.  
+• There’s no single formula for calculating a dynamic-programming solution.
+
+
+## Chapter 10 k-nearest neighbours
+It is used in classification, If we put two fruits grapefruit and orange on graph with x axis as SIZE and y axis as COLOUR. Then to classify items on the graph we might take neighbouring items and compare them. More neighbors are orange means it is orange.   
+
+Same happens with the netflix recommendation system. Users with same choice of movies are placed together on graph and then ask them to rate the movies. Based on their ratings movies are recommended to other users.
+
+##### Regression
+It is like taking an average.
+These are the two basic things you’ll do with KNN—classification and regression:  
+• Classification = categorization into a group  
+• Regression = predicting a response (like a number)  
+**Bakery** example
+
+##### Cosine similarity
+Cosine similarity doesn’t measure the distance between two vectors. Instead, it compares the angles of the two vectors. Suppose when two users like the movie but one prefers to rate 5 star to best of best movies and another prefers to rate 5 to all of the movies which he likes. So in this case even if they both like same movie by using old distance formula we won't be able to plot them as neighbors even if they have similar movie choice.
+
+##### Picking good features
+When you’re working with KNN, it’s really important to pick the right features to compare against. Picking the right features means  
+• Features that directly correlate to the movies you’re trying to recommend  
+• Features that don’t have a bias (for example, if you ask the users to only rate comedy movies, that doesn’t tell you whether they like action movies)  
+
+
+### Recap
+• KNN is used for classification and regression and involves looking at the k-nearest neighbors.  
+• Classification = categorization into a group.  
+• Regression = predicting a response (like a number).  
+• Feature extraction means converting an item (like a fruit or a user)
+into a list of numbers that can be compared.  
+• Picking good features is an important part of a successful KNN algorithm.  
 
 
 
