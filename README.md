@@ -294,11 +294,11 @@ In technical terms: at each step you pick the *locally optimal solution*, and in
 
 
 - The Radio set-covering problem   
-When calculating the exact solution will take too much time, an approximation algorithm will work. Approximation algorithms are judged by
-• How fast they are
-• How close they are to the optimal solution
-Greedy algorithms are a good choice because not only are they simple to come up with, but that simplicity means they usually run fast.
-
+When calculating the exact solution will take too much time, an approximation algorithm will work. Approximation algorithms are judged by. 
+• How fast they are. 
+• How close they are to the optimal solution. 
+Greedy algorithms are a good choice because not only are they simple to come up with, but that simplicity means they usually run fast.  
+  
 To recap:
 • Sets are like lists, except sets can’t have duplicates.
 • You can do some interesting operations on sets, like union, intersection, and difference.
