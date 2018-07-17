@@ -1,6 +1,6 @@
 # Learning Algorithms
 
-I recently started learning more about Algorithms from [Grokking Algorithms by Aditya Bhargava][1]. Since I was starting from scratch so though of making this repo to add the basic algorithm code samples here. I hope along with the code sample I would be able to add my own notes to this repo. :D
+I recently started learning more about Algorithms from [Grokking Algorithms by Aditya Bhargava][1]. Since I was starting from scratch so though of making this repo to add the basic algorithm code samples as well as some notes which will serve me as an quick notes. I'm not sure how much they will be useful to others but even if someone gets the interest towards learning algorithms that's enough. 
 
 
 ## Chapter 1 - Introduction to algorithms :
