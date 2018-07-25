@@ -335,7 +335,7 @@ This is called as *factorial function*. Suppose we have 10 cities. How many poss
 
 ##### Approximating  
 What’s a good approximation algorithm for the traveling salesperson? Something simple that finds a short path. See if you can come up with an answer before reading on.
-Here’s how I would do it: arbitrarily pick a start city.  en, each time the salesperson has to pick the next city to visit, they pick the closest unvisited city.  
+Here’s how I would do it : arbitrarily pick a start city.  en, each time the salesperson has to pick the next city to visit, they pick the closest unvisited city.  
 
 
 ### Recap
@@ -413,7 +413,7 @@ Same happens with the netflix recommendation system. Users with same choice of m
 
 ##### Regression
 It is like taking an average.
-These are the two basic things you’ll do with KNN—classification and regression:  
+These are the two basic things we will do with KNN—classification and regression:  
 • Classification = categorization into a group  
 • Regression = predicting a response (like a number)  
 **Bakery** example
