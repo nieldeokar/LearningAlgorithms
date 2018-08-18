@@ -95,7 +95,7 @@ print(countdown(5))
 This snipped will stop printing once we reach `i < 0`.
 
 ### Conclusion :  
-Recursion is used when it makes the solution clearer.  ere’s no performance bene t to using recursion; in fact, loops are sometimes better for performance. I like this quote by [Leigh Caldwell on Stack Overflow][2]
+Recursion is used when it makes the solution clearer. Tere’s no performance benefit to using recursion; in fact, loops are sometimes better for performance. I like this quote by [Leigh Caldwell on Stack Overflow][2]
 >Loops may achieve a performance gain for your program. Recursion may achieve a >performance gain for your programmer. Choose >which is more important in your >situation!
 
 ### Recap  
