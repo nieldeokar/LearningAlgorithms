@@ -33,7 +33,7 @@ You may not remember what logarithms are, but you probably know what exponential
 ### Complexity of Simple & Binary search :
 When you search for an element using simple search, in the worst case you might have to look at every single element. So for a list of 8 numbers, you’d have to check 8 numbers at most.
 
-For binary search, you have to check `log<sub>2</sub> n` elements in the worst case. For a list of 8 elements, `log<sub>2</sub> 8` == 3, because `2<sup>3</sup>` == 8. So for a list of 8 numbers, you would have to check 3 numbers at most. For a list of 1,024 elements, `log<sub>2</sub> 1,024` = 10, because 210 == 1,024. So for a list of 1,024 numbers, you’d have to check 10 numbers at most.
+For binary search, you have to check `log<sub>2</sub> n` elements in the worst case. For a list of 8 elements, `log<sub>2</sub> 8` == 3, because `2^3` == 8. So for a list of 8 numbers, you would have to check 3 numbers at most. For a list of 1,024 elements, `log<sub>2</sub> 1,024` = 10, because 2^10 == 1,024. So for a list of 1,024 numbers, you’d have to check 10 numbers at most.
 
 ### Recap  
 • Binary search is a lot faster than simple search.  
